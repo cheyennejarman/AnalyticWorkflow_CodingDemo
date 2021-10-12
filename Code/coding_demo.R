@@ -24,4 +24,14 @@ x <- rnorm(n=100, mean=0, sd=1) # independent variable
 noise <- rnorm(n=100, mean=0, sd=1)
 y <- m * x + b + noise
 
+#plot(x, y) # debug plot
+
+
+# Do linear regression ----------------------------------------------------
+
+fit <- glm(y ~ x)
+
+# Plot the results --------------------------------------------------------
 plot(x, y)
+abline(fit, col = "red")
+
