@@ -32,6 +32,11 @@ y <- m * x + b + noise
 fit <- glm(y ~ x)
 
 # Plot the results --------------------------------------------------------
-plot(x, y)
+
+par(mar = c(6, 7, 4, 1)) # figure margins
+
+plot(x, y,
+     xlab = "Normalized velocity",
+     ylab = "Normalized\nenergy consumption")
 abline(fit, col = "red")
 
